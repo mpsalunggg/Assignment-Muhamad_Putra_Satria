@@ -26,14 +26,14 @@ const Photos = () => {
       fetch('https://gallery-app-server.vercel.app/photos?_sort=id&_order=asc&q='+ submited)
       .then(respon => respon.json())
       .then(json => setPhotos(json))
-      .catch(error => console.log(error))
+      .catch(error => setError(error))
       .finally(setLoading(false))
       
     } else if(sort === 'desc'){
       fetch('https://gallery-app-server.vercel.app/photos?_sort=id&_order=desc&q='+ submited)
       .then(respon => respon.json())
       .then(json => setPhotos(json))
-      .catch(error => console.log(error))
+      .catch(error => setError(error))
       .finally(setLoading(false))
     }
   }, [sort, submited]);
