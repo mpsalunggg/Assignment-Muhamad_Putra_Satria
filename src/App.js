@@ -5,7 +5,6 @@ import Home from './routes/Home';
 import Photos from './routes/Photos';
 import AddPhoto from './routes/AddPhoto';
 import NotFound from './routes/NotFound';
-import { studentName, studentId } from './Task';
 
 const App = () => {
   return (
@@ -13,8 +12,7 @@ const App = () => {
       <div className='navbar'>
         <div className='studentInfo'>
           {/* TODO: answer here */}
-          <h2 className="studentName">{studentName}</h2>
-          <p className="studentId">{studentId}</p>  
+          <h2 className="studentName">Simple Gallery App</h2>
         </div>
         <Link to='/'>Home</Link>
         <Link to='/photos'>My Photos</Link>
